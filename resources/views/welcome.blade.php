@@ -20,7 +20,24 @@
             }
         </style>
     </head>
+
     <body class="antialiased">
+        @extends('layouts.app')
+
+        @section('content')
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">App de notas</div>
+                        <div class="card-body">
+                            <notas />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endsection
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">

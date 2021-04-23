@@ -25,3 +25,10 @@ Route::get('/register', function () {
     return view('register');
 });
 Route::post('/creation','App\Http\Controllers\UserController@create' );
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

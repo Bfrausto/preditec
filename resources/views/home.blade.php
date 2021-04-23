@@ -324,12 +324,18 @@
         </div>
 
         <div id="icons">
-            @if ($mensaje)
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <?php
+                    $nombre = explode(" ", strval( Auth::user()->name));
+                    echo $nombre[0] ?>
+                </a>
+            {{-- @if ($mensaje)
                 <p >{{$mensaje}}</p>
                 <a class="fas fa-sign-out-alt" href="{{ url('login') }}"></a>
             @else
                 <a class="fas fa-user" href="{{ url('login') }}"></a>
-            @endif
+            @endif --}}
+            <a class="fas fa-user" href="{{ route('login') }}"></a>
             <a class="fab fa-facebook-square" href="https://www.facebook.com" target="_blank"></a>
         </div>
     </div>
